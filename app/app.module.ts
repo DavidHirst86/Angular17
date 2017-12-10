@@ -7,20 +7,24 @@ import { NgModule } from '@angular/core';
 
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
-import { BeanieComponent } from './beanie/beanie.component';
+//import { BeanieComponent } from './beanie/beanie.component';
 import { Routes, RouterModule } from '@angular/router';
 import { BeanieListComponent } from './beanie-list/beanie-list.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { LoginComponent } from './login/login.component';
+import { CreateCharComponent } from './create-char/create-char.component';
+import { CharacterListComponent } from './character-list/character-list.component';
+import { CharacterPreviewComponent } from './character-preview/character-preview.component';
 
 const appRoutes: Routes = [
-  { path: 'beanies', component: BeanieListComponent },
-  { path: 'beanie/:id', component: BeanieComponent, canActivate: [AuthGuard] },
-  { path: 'beanie', component: BeanieComponent, canActivate: [AuthGuard], },
+  { path: 'CreateCharacter', component: CreateCharComponent,canActivate: [AuthGuard]},
+  // { path: 'beanie/:id', component: BeanieComponent, canActivate: [AuthGuard] },
+  { path: 'Characters', component: CharacterListComponent, canActivate: [AuthGuard] },
+  { path: 'Character/:id', component: CharacterPreviewComponent },
   { path: 'login', component: LoginComponent },
   
   { path: '',
-    redirectTo: '/beanies', // Where to go when no route is specified
+    redirectTo: '/CreateCharacter', // Where to go when no route is specified
     pathMatch: 'full'
   },
   { path: '**', component: PageNotFoundComponent }
@@ -29,10 +33,13 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    BeanieComponent,
+    // BeanieComponent,
     BeanieListComponent,
     PageNotFoundComponent,
-    LoginComponent
+    LoginComponent,
+    CreateCharComponent,
+    CharacterListComponent,
+    CharacterPreviewComponent
   ],
   imports: [
     BrowserModule,

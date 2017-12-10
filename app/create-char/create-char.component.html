@@ -1,0 +1,49 @@
+<div class="Create-Form">
+	<form  #charForm="ngForm" (ngSubmit)="onMySubmit(charForm)">
+
+		<label for="body">Body</label>
+		<select  name="Body"  [(ngModel)]="character.Body" #Body="ngModel" (ngModelChange)="onBodyChange($event)" >
+			<option [ngValue]="1">Color 1</option>
+			<option [ngValue]="2">Color 2</option>
+			<option [ngValue]="3">Color 3</option>
+			<option [ngValue]="4">Color 4</option>
+		</select>
+		<br>
+		<label for="Head">Head</label>
+		<select name="Head" [(ngModel)]="character.Head" #Head="ngModel" (ngModelChange)="onHeadChange($event)">
+			<option [ngValue]="1">Color 1</option>
+			<option [ngValue]="2">Color 2</option>
+			<option [ngValue]="3">Color 3</option>
+			<option [ngValue]="4">Color 4</option>
+		</select>
+		<br>
+		<label for="Legs">Legs</label>
+		<select name="Legs"[(ngModel)]="character.Legs" #Legs="ngModel" (ngModelChange)="onLegsChange($event)">
+			<option [ngValue]="1">Color 1</option>
+			<option [ngValue]="2">Color 2</option>
+			<option [ngValue]="3">Color 3</option>
+			<option [ngValue]="4">Color 4</option>
+		</select>
+		<br>
+		<label for="Arms">Arms</label>
+		<select name="Arms"[(ngModel)]="character.Arms" #Arms="ngModel" (ngModelChange)="onArmsChange($event)">
+			<option [ngValue]="1">Color 1</option>
+			<option [ngValue]="2">Color 2</option>
+			<option [ngValue]="3">Color 3</option>
+			<option [ngValue]="4">Color 4</option>
+		</select>
+		<br>
+		<button class="btn btn-primary" type="submit" id="submit-e2e">
+    Save
+  </button>
+	</form>
+</div>
+
+<div class="character-screen">
+	<img class="character-body-img" src="assets/images/body_{{character.Body}}.png">
+	<img class="character-head-img" src="assets/images/head_{{character.Head}}.png">
+	<img class="character-arms-img" src="assets/images/arms_{{character.Arms}}.png">
+	<img class="character-legs-img" src="assets/images/legs_{{character.Legs}}.png">
+</div>
+
+

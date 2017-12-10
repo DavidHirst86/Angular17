@@ -1,0 +1,6 @@
+<div *ngFor="let character of temp" (click)="onClick(character)"
+  class="beanie-e2e">
+
+  {{character.Body}} - {{character.Head}} - {{character.Legs}} - {{character.Arms}}
+  <button (click)="onDelete($event, character)">Delete</button>
+</div>

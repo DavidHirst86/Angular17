@@ -1,0 +1,38 @@
+.character-body-img{
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	z-index: 1;
+
+}
+.character-head-img{
+	width: 130px;
+	height: 130px;
+	position: absolute;
+	top:145px;
+	z-index: 2;
+	
+}
+.character-arms-img{
+	width: 220px;
+	height: 220px;
+	position: absolute;
+	z-index: 2;
+	
+}
+.character-legs-img{
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	top:400px;
+	z-index: 2;
+	
+}
+.character-screen{
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
