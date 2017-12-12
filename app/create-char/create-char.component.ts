@@ -30,7 +30,7 @@ export class CreateCharComponent implements OnInit {
   ngOnInit() {
   }
   onBodyChange(id){
-    this.character.Body=id;
+    this.character.body=id;
   }
   onHeadChange(id){
     this.character.Head=id;

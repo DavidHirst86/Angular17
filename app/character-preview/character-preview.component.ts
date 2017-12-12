@@ -34,15 +34,11 @@ export class CharacterPreviewComponent implements OnInit {
     			this.character=onlyCharacters;
     			console.log(this.character);
     			break;
-				}
-        // ...This code..
-        
+        }
+      }
+        // ...This code.. 
       });
-      
-      
       // This code will run before..
-  }
-				});
-  	
-
+  });
+}
 }
